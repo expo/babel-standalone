@@ -3,15 +3,7 @@ const { version } = require('@babel/core/package.json');
 
 module.exports = {
   entry: './index',
-  mode: 'production',
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-      },
-    ],
-  },
+  mode: 'development',
   node: {
     // Mock Node.js modules that Babel require()s but that we don't
     // particularly care about.
@@ -26,8 +18,6 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"',
-      'process.env': JSON.stringify({ NODE_ENV: 'production' }),
       BABEL_VERSION: JSON.stringify(version),
       VERSION: JSON.stringify(version),
     }),

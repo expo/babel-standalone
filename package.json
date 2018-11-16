@@ -1,9 +1,9 @@
 {
-  "name": "babel-standalone-minimal",
+  "name": "@expo/babel-standalone",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
-  "repository": "git@github.com:satya164/react-simple-code-editor.git",
+  "repository": "git@github.com:expo/babel-standalone.git",
   "author": "Satyajit Sahoo <satyajit.happy@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -12,8 +12,6 @@
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@babel/plugin-proposal-decorators": "^7.1.2",
-    "@babel/preset-env": "^7.1.5",
-    "babel-loader": "^8.0.4",
     "metro-react-native-babel-preset": "^0.49.1",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
