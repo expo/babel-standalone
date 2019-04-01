@@ -22,4 +22,21 @@ module.exports = {
       VERSION: JSON.stringify(version),
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              require('metro-react-native-babel-preset').getPreset(null, {
+                enableBabelRuntime: false,
+              }),
+            ],
+          },
+        },
+      },
+    ],
+  },
 };
