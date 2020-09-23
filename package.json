@@ -2,6 +2,7 @@
   "name": "@expo/babel-standalone",
   "version": "1.0.0",
   "main": "dist/babel-standalone.js",
+  "types": "types.d.ts",
   "repository": "git@github.com:expo/babel-standalone.git",
   "author": "Satyajit Sahoo <satyajit.happy@gmail.com>",
   "license": "MIT",
@@ -10,7 +11,8 @@
     "prepublishOnly": "webpack"
   },
   "files": [
-    "dist"
+    "dist",
+    "types.d.ts"
   ],
   "devDependencies": {
     "@babel/core": "^7.11.6",
