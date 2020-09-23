@@ -11,7 +11,10 @@
 /* global VERSION */
 /* eslint-disable max-len */
 
-import * as Babel from '@babel/core';
+import * as Babel from "@babel/core";
+import * as Generator from "@babel/generator";
+import * as Traverse from "@babel/traverse";
+import * as Parser from "@babel/parser";
 
 const isArray =
   Array.isArray ||
@@ -148,3 +151,17 @@ registerPreset(
     enableBabelRuntime: false,
   })
 );
+
+export function generate(ast, opts, code) {
+  return Generator.default(ast, opts, code);
+}
+
+export function traverse(parent, opts, scope, state, parentPath) {
+  return Traverse.default(parent, opts, scope, state, parentPath);
+}
+
+export const visitors = Traverse.visitors;
+
+export function parse(input, options) {
+  return Parser.parse(input, options);
+}
