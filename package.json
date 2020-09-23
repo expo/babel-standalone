@@ -1,6 +1,6 @@
 {
   "name": "@expo/babel-standalone",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/babel-standalone.js",
   "types": "types.d.ts",
   "repository": "git@github.com:expo/babel-standalone.git",

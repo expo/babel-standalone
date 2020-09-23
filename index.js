@@ -113,7 +113,7 @@ export function registerPlugin(name, plugin) {
  * is the name of the plugin, and the value is the plugin itself.
  */
 export function registerPlugins(newPlugins) {
-  Object.keys(newPlugins).forEach(name =>
+  Object.keys(newPlugins).forEach((name) =>
     registerPlugin(name, newPlugins[name])
   );
 }
@@ -151,6 +151,19 @@ registerPreset(
     enableBabelRuntime: false,
   })
 );
+
+export function getPlugin(name) {
+  const plugin = availablePlugins[name];
+  if (plugin) {
+    return plugin;
+  }
+  switch (name) {
+    case "@babel/plugin-transform-object-assign":
+      return require("@babel/plugin-transform-object-assign");
+    default:
+      return;
+  }
+}
 
 export function generate(ast, opts, code) {
   return Generator.default(ast, opts, code);
