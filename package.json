@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "prepublish": "webpack"
+    "prepublishOnly": "webpack"
   },
   "files": [
     "dist"
